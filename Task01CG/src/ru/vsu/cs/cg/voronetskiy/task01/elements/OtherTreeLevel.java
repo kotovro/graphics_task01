@@ -17,7 +17,10 @@ public class OtherTreeLevel extends BaseElement {
         int[] arrOfY = new int[] {positionY + size, positionY, positionY + size};
 
         g2d.setColor(Color.green);
-        g2d.drawPolygon(arrOfX, arrOfY, 3);
+        //g2d.drawPolygon(arrOfX, arrOfY, 3);
         g2d.fillPolygon(arrOfX, arrOfY, 3);
+        g2d.setColor(Color.black);
+        //g2d.drawPolygon(arrOfX, arrOfY, 3);
+        g2d.drawPolygon(arrOfX, arrOfY, 3);
     }
 }

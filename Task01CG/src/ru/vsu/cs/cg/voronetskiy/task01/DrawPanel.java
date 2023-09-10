@@ -1,9 +1,12 @@
 package ru.vsu.cs.cg.voronetskiy.task01;
 
+//import ru.vsu.cs.cg.voronetskiy.task01.elements.OtherTree;
+//import ru.vsu.cs.cg.voronetskiy.task01.elements.Picture;
+//import ru.vsu.cs.cg.voronetskiy.task01.elements.Swing;
+//import ru.vsu.cs.cg.voronetskiy.task01.elements.Tree;
+
 import ru.vsu.cs.cg.voronetskiy.task01.elements.OtherTree;
 import ru.vsu.cs.cg.voronetskiy.task01.elements.Picture;
-import ru.vsu.cs.cg.voronetskiy.task01.elements.Swing;
-import ru.vsu.cs.cg.voronetskiy.task01.elements.Tree;
 
 import javax.swing.*;
 import java.awt.*;
@@ -54,22 +57,18 @@ public class DrawPanel extends JPanel {
 //        }
         //LinkedList<Elemnets> elms = ;
 //        for ()
-//        Tree tree = new Tree("pine", 3);
-//        tree.drawTree((Graphics2D) gr);
 
         //g.drawLine(10, 20, 30, 50);
         //Swing swing = new Swing(100, 100, 70, 100);
         //swing.drawSwing(g);
 
-        //OtherTree tree = new OtherTree(100, 200, 300, 2);
-        Picture picture  = new Picture();
-        picture.drawSelf(g);
-        //tree.drawSelf(g);
 
+        Picture picture  = new Picture(0, 0, 600 , 800);
+        picture.drawSelf(g);
 //        g.setColor(Color.black);
 //        for (int i = 0; i < 6; i++) {
-//            g.drawRect(100 + i * 120, 200, 100, 300);
-//            g.drawRect(100 + i * 120, 200, 50, 300);
+//            g.drawRect(100 + i * 150, 200, (200 + 50 * i) / 3, 200+ 50 * i);
+//            g.drawRect(100 + i * 150, 200, (200 + 50 * i) / 6, 200 + 50 * i);
 //        }
     }
 

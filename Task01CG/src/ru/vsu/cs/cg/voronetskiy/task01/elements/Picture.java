@@ -1,9 +1,9 @@
 package ru.vsu.cs.cg.voronetskiy.task01.elements;
 
+import java.util.Random;
+
 public class Picture extends BaseElement {
-    public Picture() {
-        for (int i = 0; i < 6; i++) {
-            this.parts.add(new OtherTree(100 + i * 120, 200, 300, i + 1));
+    public Picture(int x, int y, int height, int width) {
+        this.parts.add(new Forest(x, y, height, width));
         }
     }
-}
