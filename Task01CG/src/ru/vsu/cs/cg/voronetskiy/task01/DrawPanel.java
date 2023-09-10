@@ -63,7 +63,7 @@ public class DrawPanel extends JPanel {
         //swing.drawSwing(g);
 
 
-        Picture picture  = new Picture(0, 0, 600 , 800);
+        Picture picture  = new Picture(0, 0, 800 , 600);
         picture.drawSelf(g);
 //        g.setColor(Color.black);
 //        for (int i = 0; i < 6; i++) {

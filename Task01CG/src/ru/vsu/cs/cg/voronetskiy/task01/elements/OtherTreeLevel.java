@@ -19,7 +19,7 @@ public class OtherTreeLevel extends BaseElement {
         g2d.setColor(Color.green);
         //g2d.drawPolygon(arrOfX, arrOfY, 3);
         g2d.fillPolygon(arrOfX, arrOfY, 3);
-        g2d.setColor(Color.black);
+        g2d.setColor(Color.gray);
         //g2d.drawPolygon(arrOfX, arrOfY, 3);
         g2d.drawPolygon(arrOfX, arrOfY, 3);
     }

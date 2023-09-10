@@ -16,7 +16,7 @@ public class LeafTreeLevel extends BaseElement {
     public void drawSelf(Graphics2D g2d) {
         g2d.setColor(Color.green);
         g2d.fillOval(positionX, positionY, (int)(size / ratio), size);
-        g2d.setColor(Color.black);
+        g2d.setColor(Color.gray);
         g2d.drawOval(positionX, positionY, (int)(size / ratio), size);
 
     }
