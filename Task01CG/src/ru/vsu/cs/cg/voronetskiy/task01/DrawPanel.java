@@ -1,6 +1,7 @@
 package ru.vsu.cs.cg.voronetskiy.task01;
 
 import ru.vsu.cs.cg.voronetskiy.task01.elements.OtherTree;
+import ru.vsu.cs.cg.voronetskiy.task01.elements.Picture;
 import ru.vsu.cs.cg.voronetskiy.task01.elements.Swing;
 import ru.vsu.cs.cg.voronetskiy.task01.elements.Tree;
 
@@ -60,11 +61,16 @@ public class DrawPanel extends JPanel {
         //Swing swing = new Swing(100, 100, 70, 100);
         //swing.drawSwing(g);
 
-        OtherTree tree = new OtherTree(100, 200, 300, 1);
-        tree.drawSelf(g);
-        g.setColor(Color.black);
-        g.drawRect(100, 200, 50, 300);
-        g.drawRect(100, 200, 25, 300);
+        //OtherTree tree = new OtherTree(100, 200, 300, 2);
+        Picture picture  = new Picture();
+        picture.drawSelf(g);
+        //tree.drawSelf(g);
+
+//        g.setColor(Color.black);
+//        for (int i = 0; i < 6; i++) {
+//            g.drawRect(100 + i * 120, 200, 100, 300);
+//            g.drawRect(100 + i * 120, 200, 50, 300);
+//        }
     }
 
 }

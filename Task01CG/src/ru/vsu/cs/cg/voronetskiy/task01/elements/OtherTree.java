@@ -23,11 +23,17 @@ public class OtherTree extends BaseElement {
     private void createParts() {
         int rootHeight = size / 6;
         int croneHeight = size * 5 / 6;
-        int treeWidth = size / 6;
+        int treeWidth = size / 3;
         int rootWidth = rootHeight / 4;
         parts.add(new TreeRoot(positionX + treeWidth / 2 - rootWidth / 2, positionY + croneHeight, rootHeight));
+        double[] fib = new double[] {0, 1.0/8, 1.0/5, 1.0/3, 1.0/2, 1.0/1.4};
         for (int i = 0; i < levels; i++) {
-            parts.add(new OtherTreeLevel(positionX + (levels - i - 1) * size / 72, positionY - (levels - i - 1) * size / 36, size * (5 / levels + i) / 6));
+            int levelWidth = treeWidth;// / (levels - i);
+            int levelHeight = croneHeight - (int)(croneHeight * fib[levels - i - 1]);
+            double ratio = (double) levelHeight / levelWidth;
+
+            parts.add(new OtherTreeLevel(positionX + treeWidth / 2 - levelWidth / 2, positionY, levelHeight, ratio));
+
         }
     }
 

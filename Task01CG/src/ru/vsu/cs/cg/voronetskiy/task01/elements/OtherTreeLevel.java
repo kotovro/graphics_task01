@@ -4,14 +4,16 @@ import java.awt.*;
 
 public class OtherTreeLevel extends BaseElement {
 
-    public OtherTreeLevel(int x, int y, int size) {
+    private double ratio;
+    public OtherTreeLevel(int x, int y, int size, double ratio) {
         this.positionX = x;
         this.positionY = y;
         this.size = size;
+        this.ratio = ratio;
     }
     @Override
     public void drawSelf(Graphics2D g2d) {
-        int[] arrOfX = new int[] {positionX, positionX + size / 10, positionX + size / 5};
+        int[] arrOfX = new int[] {positionX, (int) (positionX + size / 2 / ratio), (int) (positionX + size / ratio)};
         int[] arrOfY = new int[] {positionY + size, positionY, positionY + size};
 
         g2d.setColor(Color.green);
