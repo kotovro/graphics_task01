@@ -8,7 +8,8 @@ public class House extends BaseElement {
     public House (int x, int y, int width, int height) {
         this.positionX = x;
         this.positionY = y;
-        int houseHeight = (int)(height / 1.5);
+        this.size = height;
+        int houseHeight = (int)(size / 1.5);
         int wallHeight = houseHeight / 2;
         int houseWidth = houseHeight;
         int windowWidth = (int)(wallHeight * 0.6);

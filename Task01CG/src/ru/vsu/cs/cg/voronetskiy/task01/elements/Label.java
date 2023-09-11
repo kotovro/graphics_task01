@@ -16,7 +16,7 @@ public class Label extends BaseElement {
         g2d.setColor(Color.white);
         g2d.drawRoundRect(positionX, positionY, size, (int)(size * 0.4), 10, 20);
         g2d.setColor(Color.black);
-        g2d.setFont(new Font("Times", Font.PLAIN, 12));
-        g2d.drawString(text, positionX, positionY);
+        g2d.setFont(new Font("Times", Font.BOLD, 12));
+        g2d.drawString(text, (int)(positionX + size * 0.1), positionY + (int)(size * 0.4) / 2);
     }
 }
