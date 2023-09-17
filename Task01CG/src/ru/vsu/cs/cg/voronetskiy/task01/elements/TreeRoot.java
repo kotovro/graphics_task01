@@ -11,7 +11,7 @@ public class TreeRoot extends BaseElement {
 
     @Override
     public void drawSelf(Graphics2D g2d) {
-        g2d.setColor(Color.ORANGE);
+        g2d.setColor(new Color(128, 64, 64));
         g2d.fillRect(positionX, positionY, size / 12, size);
         g2d.drawRect(positionX, positionY, size / 12, size);
     }

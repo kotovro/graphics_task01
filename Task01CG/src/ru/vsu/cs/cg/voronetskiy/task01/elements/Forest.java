@@ -16,19 +16,20 @@ public class Forest extends BaseElement {
         this.positionY = y;
         this.height = height;
         this.width = width;
+        int maxTreeHeight = height * 3 / 4;
         Random random = new Random();
 
-        int amountOther = random.nextInt(1, 40);
+        int amountOther = random.nextInt(10, 40);
         for (int i = 0; i < amountOther; i++) {
-            int treeSize = random.nextInt(50, 300);
+            int treeSize = random.nextInt(80, maxTreeHeight);
 //            int levels = random.nextInt(1, 7);
             int posX = random.nextInt(positionX, positionX + width - treeSize / 3);
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
             this.parts.add(new LeafTree(posX, posY, treeSize));
         }
-        amountOther = random.nextInt(1, 40);
+        amountOther = random.nextInt(15, 40);
         for (int i = 0; i < amountOther; i++) {
-            int treeSize = random.nextInt(50, 300);
+            int treeSize = random.nextInt(50, maxTreeHeight);
             int levels = random.nextInt(1, 7);
             int posX = random.nextInt(positionX, positionX + width - treeSize / 3);
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
