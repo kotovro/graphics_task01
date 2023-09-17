@@ -1,8 +1,8 @@
 package ru.vsu.cs.cg.voronetskiy.task01.elements;
 
 public class LeafTree extends Tree {
-    public LeafTree(int x, int y, int size, int lvl) {
-        super(x, y, size, lvl);
+    public LeafTree(int x, int y, int size) {
+        super(x, y, size);
     }
 
     @Override

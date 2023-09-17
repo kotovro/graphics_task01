@@ -21,18 +21,19 @@ public class Forest extends BaseElement {
         int amountOther = random.nextInt(1, 40);
         for (int i = 0; i < amountOther; i++) {
             int treeSize = random.nextInt(50, 300);
-            int levels = random.nextInt(1, 7);
+//            int levels = random.nextInt(1, 7);
             int posX = random.nextInt(positionX, positionX + width - treeSize / 3);
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
-            this.parts.add(new LeafTree(posX, posY, treeSize, levels));
+            this.parts.add(new LeafTree(posX, posY, treeSize));
         }
-        amountOther = random.nextInt(1, 20);
+        amountOther = random.nextInt(1, 40);
         for (int i = 0; i < amountOther; i++) {
             int treeSize = random.nextInt(50, 300);
             int levels = random.nextInt(1, 7);
             int posX = random.nextInt(positionX, positionX + width - treeSize / 3);
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
-            this.parts.add(new OtherTree(posX, posY, treeSize, levels));
+            int color = random.nextInt(0, 5);
+            this.parts.add(new OtherTree(posX, posY, treeSize, levels, color));
         }
         Collections.sort(this.parts);
     }
