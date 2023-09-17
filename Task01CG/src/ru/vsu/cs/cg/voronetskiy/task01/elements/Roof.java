@@ -14,6 +14,6 @@ public class Roof extends BaseElement {
         int roofWidth = (int)(size * 3 * 1.4);
             int roofPositionX = (int)(size * 3 / 2 - roofWidth / 2) + positionX;
         g2d.setColor(Color.red);
-        g2d.fillPolygon(new int[]{roofPositionX,  roofPositionX + roofWidth / 2, roofPositionX + roofWidth}, new int[]{positionY, positionY - size, positionY}, 3);
+        g2d.fillPolygon(new int[]{roofPositionX,  roofPositionX + roofWidth / 2, roofPositionX + roofWidth}, new int[]{positionY + size, positionY, positionY + size}, 3);
     }
 }

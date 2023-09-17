@@ -14,6 +14,7 @@ public class LeafTreeLevel extends BaseElement {
     }
     @Override
     public void drawSelf(Graphics2D g2d) {
+        // select color from some range and add leves
         g2d.setColor(Color.green);
         g2d.fillOval(positionX, positionY, (int)(size / ratio), size);
         g2d.setColor(Color.gray);

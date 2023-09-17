@@ -6,8 +6,7 @@ public class Picture extends BaseElement {
     public Picture(int x, int y, int width, int height) {
         this.parts.add(new Sky(x, y, width, height / 3));
         this.parts.add(new Ground(x, y + height / 3, width, height * 2 / 3));
-        this.parts.add(new Forest(x, y + height / 3, width, height * 2 / 3));
-        this.parts.add(new House(x, y + height / 3, width, height * 2 / 3));
+
 
         }
     }

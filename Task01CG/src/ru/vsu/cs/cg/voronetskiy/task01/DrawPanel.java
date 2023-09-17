@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.geom.GeneralPath;
 
 public class DrawPanel extends JPanel {
+    private Picture picture  = new Picture(0, 0, 800 , 600);
     public DrawPanel() {
     }
 
@@ -62,8 +63,6 @@ public class DrawPanel extends JPanel {
         //Swing swing = new Swing(100, 100, 70, 100);
         //swing.drawSwing(g);
 
-
-        Picture picture  = new Picture(0, 0, 800 , 600);
         picture.drawSelf(g);
 //        g.setColor(Color.black);
 //        for (int i = 0; i < 6; i++) {

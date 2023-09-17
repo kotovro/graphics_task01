@@ -1,6 +1,7 @@
 package ru.vsu.cs.cg.voronetskiy.task01.elements;
 
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 
 public class Label extends BaseElement {
     private String text = new String();
@@ -14,9 +15,12 @@ public class Label extends BaseElement {
     @Override
     public void drawSelf(Graphics2D g2d) {
         g2d.setColor(Color.white);
-        g2d.drawRoundRect(positionX, positionY, size, (int)(size * 0.4), 10, 20);
+        int height = (int)(size * 0.4);
+        g2d.drawRoundRect(positionX, positionY, size, height, 10, 20);
         g2d.setColor(Color.black);
         g2d.setFont(new Font("Times", Font.BOLD, 12));
-        g2d.drawString(text, (int)(positionX + size * 0.1), positionY + (int)(size * 0.4) / 2);
+        FontMetrics fm = g2d.getFontMetrics();
+        Rectangle2D r = fm.getStringBounds(text, g2d);
+        g2d.drawString(text, positionX + (int)(size / 2 - r.getWidth() / 2), positionY + (int)(height / 2 - r.getHeight() / 2 + fm.getAscent()));
     }
 }

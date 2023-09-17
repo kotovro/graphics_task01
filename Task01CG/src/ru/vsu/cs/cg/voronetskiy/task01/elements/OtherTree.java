@@ -4,6 +4,7 @@ public class OtherTree extends Tree {
     public OtherTree(int x, int y, int size, int levels) {
         super(x, y, size, levels);
     }
+    // make their levels with arcs
 
     @Override
     protected void createCrone() {
