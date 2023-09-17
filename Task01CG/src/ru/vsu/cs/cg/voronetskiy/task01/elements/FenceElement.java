@@ -14,7 +14,7 @@ public class FenceElement extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         GeneralPath path = new GeneralPath();
         int width = size / 6;
         path.moveTo(positionX + width / 2, positionY);

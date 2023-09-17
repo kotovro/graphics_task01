@@ -10,15 +10,15 @@ public class Ground extends BaseElement{
         this.size = height;
         this.width = width;
         this.parts.add(new Forest(x, y, width, height));
-        int fenceHeight = height / 10;
+        int fenceHeight = height / 6;
         this.parts.add(new Fence(x, y + height - fenceHeight, width, fenceHeight));
         this.parts.add(new House(x, y, width, height));
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         g2d.setColor(Color.green);
         g2d.fillRect(positionX, positionY, width, size);
-        super.drawSelf(g2d);
+        super.drawSelf(g2d, frameNumber);
     }
 }

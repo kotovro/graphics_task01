@@ -1,6 +1,7 @@
 package ru.vsu.cs.cg.voronetskiy.task01.elements;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Leaf extends BaseElement {
     private Color color;
@@ -14,9 +15,12 @@ public class Leaf extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         g2d.setColor(this.color);
-        g2d.fillOval(positionX, positionY, (int)(size / ratio), size);
+        Random random = new Random();
+        int shift = (int)((size / ratio / 2) * (frameNumber % 2) * (Math.pow(-1, random.nextInt(0, 2))));
+        g2d.fillOval(positionX + shift, positionY, (int)(size / ratio), size);
         g2d.setColor(Color.gray);
+
     }
 }

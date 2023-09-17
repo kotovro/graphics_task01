@@ -27,7 +27,7 @@ public class Forest extends BaseElement {
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
             this.parts.add(new LeafTree(posX, posY, treeSize));
         }
-        amountOther = random.nextInt(15, 40);
+        amountOther = random.nextInt(10, 40);
         for (int i = 0; i < amountOther; i++) {
             int treeSize = random.nextInt(50, maxTreeHeight);
             int levels = random.nextInt(1, 7);

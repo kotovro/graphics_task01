@@ -13,7 +13,7 @@ public class Sky extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         g2d.setColor(Color.cyan);
         g2d.fillRect(positionX, positionY, width, size);
     }

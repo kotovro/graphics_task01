@@ -13,7 +13,7 @@ public class Label extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         g2d.setColor(Color.white);
         int height = (int)(size * 0.4);
         g2d.drawRoundRect(positionX, positionY, size, height, 10, 20);

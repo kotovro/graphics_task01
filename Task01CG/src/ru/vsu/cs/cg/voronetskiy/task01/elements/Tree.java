@@ -27,10 +27,10 @@ public class Tree extends BaseElement {
 
     protected void createCrone() {}
     protected void createRoot() {
-        int rootHeight = size / 2;
+        int rootHeight = size / 3;
         int croneHeight = size * 5 / 6;
         int treeWidth = size / 3;
-        int rootWidth = rootHeight / 12;
+        int rootWidth = rootHeight / 8;
         parts.add(new TreeRoot(positionX + treeWidth / 2 - rootWidth / 2, positionY + size - rootHeight, rootHeight));
     }
 

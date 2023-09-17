@@ -29,10 +29,10 @@ public class Fence extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int animationNumber) {
         g2d.setColor(Color.lightGray);
         g2d.fillRect(positionX, positionY + size / 3, width, size / 6);
         g2d.fillRect(positionX, positionY + size * 2 / 3 , width, size / 6);
-        super.drawSelf(g2d);
+        super.drawSelf(g2d, animationNumber);
     }
 }

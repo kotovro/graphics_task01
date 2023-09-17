@@ -10,7 +10,7 @@ public class Roof extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         int roofWidth = (int)(size * 3 * 1.4);
             int roofPositionX = (int)(size * 3 / 2 - roofWidth / 2) + positionX;
         g2d.setColor(Color.red);

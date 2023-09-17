@@ -18,9 +18,9 @@ public class Wall extends BaseElement {
     }
 
     @Override
-    public void drawSelf(Graphics2D g2d) {
+    public void drawSelf(Graphics2D g2d, int frameNumber) {
         g2d.setColor(Color.gray);
         g2d.fillRect(positionX, positionY, width, size);
-        super.drawSelf(g2d);
+        super.drawSelf(g2d, frameNumber);
     }
 }

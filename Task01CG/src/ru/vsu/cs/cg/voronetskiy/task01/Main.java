@@ -1,6 +1,8 @@
 package ru.vsu.cs.cg.voronetskiy.task01;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Main {
 
@@ -9,6 +11,13 @@ public class Main {
         mw.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         mw.setSize(800, 600);
         mw.setVisible(true);
+        Timer timer = new Timer(400, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mw.repaint();
+            }
+        });
+        timer.start();
     }
 
 }
