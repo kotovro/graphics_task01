@@ -10,6 +10,8 @@ public class Ground extends BaseElement{
         this.size = height;
         this.width = width;
         this.parts.add(new Forest(x, y, width, height));
+        int fenceHeight = height / 10;
+        this.parts.add(new Fence(x, y + height - fenceHeight, width, fenceHeight));
         this.parts.add(new House(x, y, width, height));
     }
 

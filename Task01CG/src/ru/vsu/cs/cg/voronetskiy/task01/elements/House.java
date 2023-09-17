@@ -7,7 +7,7 @@ public class House extends BaseElement {
         this.size = height;
         int houseHeight = size * 4 / 9;
         int roofHeight = houseHeight / 5;
-        int wallHeight = roofHeight * 4;
+        int wallHeight = houseHeight - roofHeight;
         this.parts.add(new Roof(this.positionX + width * 4 / 5,  this.positionY + height - houseHeight, roofHeight));
         this.parts.add(new Wall(this.positionX + width * 4 / 5, this.positionY +  height - houseHeight + roofHeight, wallHeight));
     }
