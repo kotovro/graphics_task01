@@ -19,11 +19,12 @@ public class LeafTreeLevel extends BaseElement {
             new Color(181, 255, 113),
     };
 
-    public LeafTreeLevel(int x, int y, int size, double ratio) {
+    public LeafTreeLevel(int x, int y, int size, double ratio, BaseElement parent) {
         this.positionX = x;
         this.positionY = y;
         this.size = size;
         this.ratio = ratio;
+        this.parent = parent;
         int leafSize = size / 10;
         this.ellipse = new Ellipse2D.Double(positionX, positionY, size / ratio, size);
         Random random = new Random();
@@ -38,7 +39,7 @@ public class LeafTreeLevel extends BaseElement {
         if (ellipse.contains(lx, ly)) {
             Random random = new Random();
             int color = random.nextInt(0, 6);
-            parts.add(new Leaf(lx, ly, leafSize, ratio, availableColors[color]));
+            parts.add(new Leaf(lx, ly, leafSize, ratio, availableColors[color], this));
         }
     }
 //    @Override

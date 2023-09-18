@@ -12,8 +12,8 @@ public class OtherTree extends Tree {
             new Color(70, 156, 70),
     };
 
-    public OtherTree(int x, int y, int size, int levels, int color) {
-        super(x, y, size, levels, color);
+    public OtherTree(int x, int y, int size, int levels, int color, BaseElement parent) {
+        super(x, y, size, parent, levels, color);
     }
 
     @Override
@@ -24,8 +24,8 @@ public class OtherTree extends Tree {
         for (int i = 0; i < levels; i++) {
             int levelWidth = treeWidth;// / (levels - i);
             int levelHeight = croneHeight - (int)(croneHeight * fib[levels - i - 1]);
-            double ratio = (double) levelHeight / levelWidth;
-            parts.add(new OtherTreeLevel(positionX + treeWidth / 2 - levelWidth / 2, positionY, levelHeight, ratio, availableColors[colorNum]));
+            double ratio = (double)levelHeight / levelWidth;
+            parts.add(new OtherTreeLevel(positionX, positionY, levelHeight, ratio, availableColors[colorNum], this));
         }
     }
 

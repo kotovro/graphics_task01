@@ -11,11 +11,12 @@ public class Forest extends BaseElement {
 
     private int height;
     private int width;
-    public Forest(int x, int y, int width, int height) {
+    public Forest(int x, int y, int width, int height, BaseElement parent) {
         this.positionX = x;
         this.positionY = y;
         this.height = height;
         this.width = width;
+        this.parent = parent;
         int maxTreeHeight = height * 3 / 4;
         Random random = new Random();
 
@@ -25,7 +26,7 @@ public class Forest extends BaseElement {
 //            int levels = random.nextInt(1, 7);
             int posX = random.nextInt(positionX, positionX + width - treeSize / 3);
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
-            this.parts.add(new LeafTree(posX, posY, treeSize));
+            this.parts.add(new LeafTree(posX, posY, treeSize, this));
         }
         amountOther = random.nextInt(10, 40);
         for (int i = 0; i < amountOther; i++) {
@@ -34,7 +35,7 @@ public class Forest extends BaseElement {
             int posX = random.nextInt(positionX, positionX + width - treeSize / 3);
             int posY = random.nextInt(positionY - treeSize, positionY + height - treeSize);
             int color = random.nextInt(0, 5);
-            this.parts.add(new OtherTree(posX, posY, treeSize, levels, color));
+            this.parts.add(new OtherTree(posX, posY, treeSize, levels, color, this));
         }
         Collections.sort(this.parts);
     }
