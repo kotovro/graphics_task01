@@ -39,7 +39,7 @@ public class Support extends BaseElement {
         g2d.setStroke(new BasicStroke(thickness));
         double circleHeight = (double) scaledSize / 10;
         double circleWidth = (double) scaledWidth / 10;
-        g2d.fillOval((int) (scaledX + scaledWidth / 2 - circleWidth / 2), scaledY, (int) circleWidth, (int) circleHeight);
+        g2d.fillOval((int) (scaledX + scaledWidth / 2 - circleWidth / 2), scaledY - thickness, (int) circleWidth, (int) circleHeight);
         g2d.fill(path);
         g2d.setStroke(oldStroke);
     }

@@ -37,6 +37,7 @@ public class Forest extends BaseElement {
             int color = random.nextInt(0, 5);
             this.parts.add(new OtherTree(posX, posY, treeSize, levels, color, this));
         }
+        this.parts.add(new Carusel(width / 3, (int)(height * 0.3), (int)(height), this));
         Collections.sort(this.parts);
     }
 }

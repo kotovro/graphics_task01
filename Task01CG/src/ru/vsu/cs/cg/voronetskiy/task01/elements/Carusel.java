@@ -6,12 +6,12 @@ public class Carusel extends BaseElement {
         this.positionY = y;
         this.size = size;
         this.parent = parent;
-        int caretSize = size / 8;
+        int caretSize = size / 6;
         int wheelSize = size - caretSize;
         int supportSize = size - wheelSize / 2;
         int thickness = size / 40;
         this.parts.add(new Support(positionX + size / 2 - supportSize / 2, positionY + wheelSize / 2, supportSize, thickness, this));
-        this.parts.add(new Wheel(positionX + caretSize / 2, positionY, wheelSize, thickness, this));
+        this.parts.add(new Wheel(positionX + caretSize / 2, positionY, wheelSize, caretSize, thickness, this));
 
     }
 
