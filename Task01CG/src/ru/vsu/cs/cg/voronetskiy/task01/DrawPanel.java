@@ -4,8 +4,6 @@ import ru.vsu.cs.cg.voronetskiy.task01.elements.Picture;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class DrawPanel extends JPanel {
 
@@ -16,9 +14,6 @@ public class DrawPanel extends JPanel {
 
     private Picture picture  = new Picture(0, 0, width , height);
     public DrawPanel() {
-    }
-    public void animate() {
-
     }
     @Override
     public void paint(Graphics gr) {

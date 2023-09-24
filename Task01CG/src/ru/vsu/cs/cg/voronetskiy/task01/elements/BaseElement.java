@@ -41,9 +41,6 @@ public class BaseElement implements Comparable<BaseElement> {
             element.drawSelf(g2d, frameNumber);
         }
     }
-    public void animateSelf(Graphics2D g2d, int frameNumber) {
-        drawSelf(g2d, frameNumber);
-    }
     public void getScale() {
         if (parent != null) {
             this.scaleX = parent.getScaleX();

@@ -27,7 +27,6 @@ public class OtherTreeLevel extends BaseElement {
         GeneralPath path = new GeneralPath();
         int levelWidth = (int)(scaledSize / scaledRatio);
         int shift = (int)((levelWidth / 8) * (frameNumber % 2) * Math.pow(-1, ((frameNumber + 1) % 4) / 2) );
-//        path.moveTo(scaledX, scaledY + scaledSize);
         path.moveTo(scaledX + levelWidth / 2, scaledY + scaledSize - scaledSize / 5);
         path.quadTo(scaledX + levelWidth / 2, scaledY + scaledSize, scaledX, scaledY + scaledSize - shift / 2);
         path.quadTo((int) (scaledX + levelWidth / 2), scaledY + scaledSize, scaledX + levelWidth /2 + shift, scaledY + Math.abs(shift));
