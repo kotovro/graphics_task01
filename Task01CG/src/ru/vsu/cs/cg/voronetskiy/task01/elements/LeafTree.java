@@ -1,8 +1,8 @@
 package ru.vsu.cs.cg.voronetskiy.task01.elements;
 
 public class LeafTree extends Tree {
-    public LeafTree(int x, int y, int size, BaseElement parent) {
-        super(x, y, size, parent);
+    public LeafTree(int x, int y, int size, int animationDelay, BaseElement parent) {
+        super(x, y, size, animationDelay, parent);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class LeafTree extends Tree {
 
             parts.add(new LeafTreeLevel(positionX + treeWidth / 2 - levelWidth / 2,
                     positionY + baseLevelHeight * i - (i == 0 ? 0 : intersection),
-                    levelHeight, ratio, this));
+                    levelHeight, ratio, animationDelay, this));
         }
     }
 }

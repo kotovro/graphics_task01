@@ -18,21 +18,22 @@ public class Wheel extends BaseElement {
         this.thickness = thickness;
     }
 
-    public Wheel(int x, int y, int size, int caretSize, int thickness, BaseElement parent) {
+    public Wheel(int x, int y, int size, int caretSize, int thickness, int animationDelay, BaseElement parent) {
         this.positionX = x;
         this.positionY = y;
         this.size = size;
         this.parent = parent;
         this.thickness = thickness;
+        this.animationDelay = animationDelay;
         for (int i = 0; i < 6; i++) {
-            this.parts.add(new Spica(positionX + size / 2, positionY + size / 2, Math.PI / 3 * i, this));
+            this.parts.add(new Spica(positionX + size / 2, positionY + size / 2, Math.PI / 3 * i, animationDelay,this));
         }
         Random random = new Random();
         for (int i = 0; i < 12; i++) {
             int color1 = random.nextInt(0, 6);
             int color2 = random.nextInt(0, 6);
             this.parts.add(new Caret(positionX + size / 2, positionY + size / 2, caretSize, Math.PI / 6 * i,
-                    availableColors[color1], availableColors[color2], this));
+                    availableColors[color1], availableColors[color2], animationDelay, this));
         }
     }
 

@@ -8,13 +8,14 @@ public class OtherTreeLevel extends BaseElement {
 
     private double ratio;
     private Color color;
-    public OtherTreeLevel(int x, int y, int size, double ratio, Color color, BaseElement parent) {
+    public OtherTreeLevel(int x, int y, int size, double ratio, int animationDelay, Color color, BaseElement parent) {
         this.positionX = x;
         this.positionY = y;
         this.size = size;
         this.ratio = ratio;
         this.color = color;
         this.parent = parent;
+        this.animationDelay = animationDelay;
     }
     @Override
     public void drawSelf(Graphics2D g2d, int frameNumber) {
@@ -26,7 +27,20 @@ public class OtherTreeLevel extends BaseElement {
         g2d.setColor(color);
         GeneralPath path = new GeneralPath();
         int levelWidth = (int)(scaledSize / scaledRatio);
-        int shift = (int)((levelWidth / 8) * (frameNumber % 2) * Math.pow(-1, ((frameNumber + 1) % 4) / 2) );
+        //int shift = (int)((levelWidth / 8) * (frameNumber % 2) * Math.pow(-1, ((frameNumber + 1) % 4) / 2) );
+        int skipFrames = 5;
+        int frame = frameNumber / skipFrames % 8;
+        int[] shifts = {
+                levelWidth / 16,
+                levelWidth / 8,
+                levelWidth /16,
+                0,
+                -levelWidth / 16,
+                -levelWidth / 8,
+                -levelWidth /16,
+                0,
+        };
+        int shift = shifts[frame];
         path.moveTo(scaledX + levelWidth / 2, scaledY + scaledSize - scaledSize / 5);
         path.quadTo(scaledX + levelWidth / 2, scaledY + scaledSize, scaledX, scaledY + scaledSize - shift / 2);
         path.quadTo((int) (scaledX + levelWidth / 2), scaledY + scaledSize, scaledX + levelWidth /2 + shift, scaledY + Math.abs(shift));

@@ -8,7 +8,7 @@ public class Caret extends BaseElement {
     private Color colorUp;
     private Color colorDown;
 
-    public Caret(int x, int y, int size, double angle,  Color color1, Color color2, BaseElement parent) {
+    public Caret(int x, int y, int size, double angle,  Color color1, Color color2, int animationDelay, BaseElement parent) {
         this.positionX = x;
         this.positionY = y;
         this.size = size;
@@ -16,13 +16,14 @@ public class Caret extends BaseElement {
         this.angle = angle;
         this.colorUp = color1;
         this.colorDown = color2;
+        this.animationDelay = animationDelay;
     }
 
     @Override
     public void drawSelf(Graphics2D g2d, int frameNumber) {
         getScale();
-        int frame = frameNumber  % 100;
-        double angleShift = frame * 2 * Math.PI / 100;
+        int frame = (frameNumber / animationDelay)  % 360;
+        double angleShift = frame * 2 * Math.PI / 360;
         int scaledSize = (int) (size * scaleY);
         int width = size * 2 / 3;
         int scaledCenterX1 = (int) ((positionX + parent.size / 2 * Math.cos(angle + angleShift)) * scaleX);

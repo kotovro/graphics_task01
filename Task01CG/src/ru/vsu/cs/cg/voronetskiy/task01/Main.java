@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class Main {
 
-    private static int delay = 400;
+    private static int delay = 40;
 
     public static void main(String[] args) {
         MainWindow mw = new MainWindow();

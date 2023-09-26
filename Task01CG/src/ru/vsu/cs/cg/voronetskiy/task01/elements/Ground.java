@@ -11,7 +11,7 @@ public class Ground extends BaseElement{
         this.size = height;
         this.width = width;
         this.parent = parent;
-        this.parts.add(new Forest(x, y, width, height, this));
+        this.parts.add(new Forest(x, y, width, height, 5, this));
         int fenceHeight = height / 6;
         this.parts.add(new Fence(x, y + height - fenceHeight, width, fenceHeight, this));
         this.parts.add(new House(x, y, width, height, this));

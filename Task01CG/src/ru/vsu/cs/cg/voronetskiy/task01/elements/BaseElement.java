@@ -30,6 +30,7 @@ public class BaseElement implements Comparable<BaseElement> {
 
     protected double scaleX;
     protected double scaleY;
+    protected int animationDelay;
 
 
     public void drawSelf(Graphics2D g2d){

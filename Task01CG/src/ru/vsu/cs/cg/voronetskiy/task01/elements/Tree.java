@@ -7,21 +7,22 @@ public class Tree extends BaseElement {
     protected int colorNum;
 
     public Tree(){}
-    public Tree(int x, int y, int size, BaseElement parent) {
-        this(x,y,size, parent, 1, 0);
+    public Tree(int x, int y, int size, int animationDelay, BaseElement parent) {
+        this(x,y,size, parent, 1, 0, animationDelay);
     }
 
-    public Tree(int x, int y, int size, BaseElement parent, int levels) {
-        this(x,y,size, parent, levels, 0);
+    public Tree(int x, int y, int size, BaseElement parent, int levels, int animationDelay) {
+        this(x,y,size, parent, levels, 0, animationDelay);
     }
 
-    public Tree(int x, int y, int size, BaseElement parent, int levels, int color) {
+    public Tree(int x, int y, int size, BaseElement parent, int levels, int color, int animationDelay) {
         this.positionX = x;
         this.positionY = y;
         this.size = size;
         this.levels = levels;
         this.colorNum = color;
         this.parent = parent;
+        this.animationDelay = animationDelay;
         createRoot();
         createCrone();
     }
